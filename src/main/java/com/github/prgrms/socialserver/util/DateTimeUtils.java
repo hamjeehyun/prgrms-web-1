@@ -1,0 +1,13 @@
+package com.github.prgrms.socialserver.util;
+
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
+public class DateTimeUtils {
+    public static Timestamp timeStampOf(LocalDateTime time) {
+        return time == null ? null : Timestamp.valueOf(time);
+    }
+    public static LocalDateTime dateTimeOf(Timestamp timestamp) {
+        return timestamp == null ? null : timestamp.toLocalDateTime();
+    }
+}
